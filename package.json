@@ -1,0 +1,27 @@
+{
+  "author": "originsw",
+  "name": "Starter-Api-Net6",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "commit": "npx git-cz",
+    "release": "standard-version",
+    "next-version": "next-standard-version"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    },
+    "cz-customizable": {
+      "config": "commitizen.config.js"
+    }
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "cz-customizable": "^6.2.0",
+    "next-standard-version": "^2.1.3",
+    "standard-version": "^9.1.0"
+  }
+}

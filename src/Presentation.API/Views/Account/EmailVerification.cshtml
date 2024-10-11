@@ -1,0 +1,20 @@
+﻿@model MailModel<Application.V1.Account.Post.RegisterTwoSteps.Models.EmailVerificationModelData>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>@Model.Subject</title>
+</head>
+<body>
+    <h1>@Model.Subject</h1>
+    <p>Por favor verifique su cuenta.</p>
+    <p>
+        <a href="@Html.Raw(Model.Data.EmailVerificationUrl
+                    .Replace("{token}",Html.UrlEncoder.Encode(Model.Data.Token))
+                    .Replace("{email}", Html.UrlEncoder.Encode(Model.Data.Email)))">
+            Haga click en este enlace para verificar su cuenta.
+        </a>
+    </p>
+    <p>Ignore este correo electrónico si no solicitó una cuenta.</p>
+</body>
+</html>
